@@ -1,0 +1,175 @@
+{
+	"index_patterns": ["wsg-*"],
+	"settings": {
+		"index.refresh_interval": "5s",
+		"index.codec": "best_compression"
+	},
+	"mappings": {
+		"properties": {
+			"@timestamp": {
+				"type": "date"
+			},
+			"@version": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"action1": {
+				"type": "keyword"
+			},
+			"action2": {
+				"type": "keyword"
+			},
+			"action_type": {
+				"type": "keyword"
+			},
+			"content_type": {
+				"type": "keyword"
+			},
+			"dst_detail": {
+				"type": "keyword"
+			},
+			"dst_ip": {
+				"type": "ip"
+			},
+			"dst_ip_reverse": {
+				"type": "keyword"
+			},
+			"dst_type": {
+				"type": "keyword"
+			},
+			"dst_url": {
+				"type": "keyword"
+			},
+			"format_version": {
+				"type": "short"
+			},
+			"geoip": {
+				"properties": {
+					"city_name": {
+						"type": "keyword"
+					},
+					"continent_code": {
+						"type": "keyword"
+					},
+					"country_code2": {
+						"type": "keyword"
+					},
+					"country_code3": {
+						"type": "keyword"
+					},
+					"country_name": {
+						"type": "keyword"
+					},
+					"dma_code": {
+						"type": "long"
+					},
+					"ip": {
+						"type": "ip"
+					},
+					"latitude": {
+						"type": "float"
+					},
+					"location": {
+						"properties": {
+							"lat": {
+								"type": "float"
+							},
+							"lon": {
+								"type": "float"
+							}
+						}
+					},
+					"longitude": {
+						"type": "float"
+					},
+					"postal_code": {
+						"type": "keyword"
+					},
+					"region_code": {
+						"type": "keyword"
+					},
+					"region_name": {
+						"type": "keyword"
+					},
+					"timezone": {
+						"type": "keyword"
+					}
+				}
+			},
+			"host": {
+				"type": "keyword"
+			},
+			"infection_score": {
+				"type": "short"
+			},
+			"match_flag": {
+				"type": "short"
+			},
+			"matched_category": {
+				"type": "keyword"
+			},
+			"matched_part": {
+				"type": "keyword"
+			},
+			"reason": {
+				"type": "keyword"
+			},
+			"referer": {
+				"type": "keyword"
+			},
+			"referer_category": {
+				"type": "keyword"
+			},
+			"referer_domain": {
+				"type": "keyword"
+			},
+			"request_fqdn": {
+				"type": "keyword"
+			},
+			"request_path": {
+				"type": "keyword"
+			},
+			"request_protocol": {
+				"type": "keyword"
+			},
+			"size": {
+				"type": "integer"
+			},
+			"spy_id": {
+				"type": "keyword"
+			},
+			"spy_type": {
+				"type": "keyword"
+			},
+			"src_detail": {
+				"type": "keyword"
+			},
+			"src_ip": {
+				"type": "ip"
+			},
+			"src_ip_reverse": {
+				"type": "keyword"
+			},
+			"src_type": {
+				"type": "keyword"
+			},
+			"tags": {
+				"type": "keyword"
+			},
+			"tq_flag": {
+				"type": "short"
+			},
+			"type": {
+				"type": "keyword"
+			},
+			"user": {
+				"type": "keyword"
+			}
+		}
+	}
+}
