@@ -10,13 +10,7 @@
 				"type": "date"
 			},
 			"@version": {
-				"type": "text",
-				"fields": {
-					"keyword": {
-						"type": "keyword",
-						"ignore_above": 256
-					}
-				}
+				"type": "keyword"
 			},
 			"action1": {
 				"type": "keyword"
@@ -75,14 +69,7 @@
 						"type": "float"
 					},
 					"location": {
-						"properties": {
-							"lat": {
-								"type": "float"
-							},
-							"lon": {
-								"type": "float"
-							}
-						}
+						"type": "geo_point"
 					},
 					"longitude": {
 						"type": "float"
